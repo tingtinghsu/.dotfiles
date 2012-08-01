@@ -1,0 +1,19 @@
+# 快速導覽
+alias ..="cd .."        # 到上一層目錄
+alias ...="cd ../.."    # 到上上一層目錄
+
+# 列出目錄清單
+alias la="ls -al"                          # 清單列表所有隱藏不隱藏的資料夾和檔案
+alias l="ls -l"                            # 清單列表不隱藏的資料夾和檔案
+alias ls="ls -l"
+alias ld='ls -l ${colorflag} | grep "^d"'  # 清單列表只列出資料夾
+
+# 抄捷徑啦
+alias c="clear"         # 清理畫面
+alias s="subl ."        # 使用 Sublime Text 2 開啟整個目錄
+alias o="open"
+alias oo="open ."
+
+# Octopress
+alias rp="rake preview"
+alias rg="rake generate"

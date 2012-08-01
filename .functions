@@ -1,0 +1,20 @@
+# 快速建立資料夾並且切換到該資料夾下
+md () { mkdir -p "$1" && cd "$1"; }
+
+# 在命令列顯示目前所在分支
+function git_branch {
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
+    echo "("${ref#refs/heads/}") ";
+}
+
+# 在命令列顯示最後的提交時間
+function git_since_last_commit {
+    now=`date +%s`;
+    last_commit=$(git log --pretty=format:%at -1 2> /dev/null) || return;
+    seconds_since_last_commit=$((now-last_commit));
+    minutes_since_last_commit=$((seconds_since_last_commit/60));
+    hours_since_last_commit=$((minutes_since_last_commit/60));
+    minutes_since_last_commit=$((minutes_since_last_commit%60));
+
+    echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
+}
