@@ -1,9 +1,6 @@
 # Sublime Text 2
 export PATH=$PATH:/bin
 
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md="\033[1;33m"
-
 # 上色
 export CLICOLOR=1                      # 啟用顏色
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx # 設置顏色
