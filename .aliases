@@ -17,3 +17,4 @@ alias oo="open ."
 # Octopress
 alias rp="rake preview"
 alias rg="rake generate"
+alias rd="rake deploy"
