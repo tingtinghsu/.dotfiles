@@ -1,6 +1,6 @@
 [user]
-	name = Ching-Han Ho
-	email = whocareu2008@gmail.com
+	name = CHH
+	email = chinghanho@whiteball.tw
 
 [color]
 	ui = auto
@@ -33,7 +33,7 @@
 	ls = ls-files
 	ign = ls-files -o -i --exclude-standard
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/whocareu2008/.gitignore_global
 	editor = subl -n -w
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
