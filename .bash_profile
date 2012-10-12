@@ -10,3 +10,6 @@ unset file
 
 # To use RVM bash completion
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
+# Load NVM
+. ~/.nvm/nvm.sh
