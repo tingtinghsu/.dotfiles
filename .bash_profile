@@ -1,3 +1,7 @@
+# That should square you away for about 10 years. :p
+HISTFILESIZE=1000000000
+HISTSIZE=1000000
+
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 for file in ~/.{bash_prompt,exports,aliases,functions}; do
