@@ -17,3 +17,6 @@ unset file
 
 # Load NVM
 . ~/.nvm/nvm.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
