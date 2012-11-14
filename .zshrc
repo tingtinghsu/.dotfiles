@@ -27,3 +27,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/heroku/bin:/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p194/bin:/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/whocareu2008/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/whocareu2008/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/bin
+
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+if [ $(rvm current) = 'system' ]; then
+  rvm 1.9.3 --default
+fi
