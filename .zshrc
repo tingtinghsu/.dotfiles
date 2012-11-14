@@ -7,6 +7,11 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="chh"
 
+## Command history configuration
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=1000000000
+SAVEHIST=1000000000
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
