@@ -37,3 +37,6 @@ PATH=$PATH:$HOME/.rvm/bin
 if [ $(rvm current) = 'system' ]; then
   rvm 1.9.3 --default
 fi
+
+# AWS EB CLI
+export PATH=$PATH:/Users/whocareu2008/.aws-eb-cli/eb/macosx/python2.7/
