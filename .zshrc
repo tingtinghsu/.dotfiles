@@ -26,7 +26,6 @@ plugins=(git gem rvm sublime history-substring-search zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/heroku/bin:/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p194/bin:/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/whocareu2008/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/whocareu2008/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/bin
 
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
@@ -40,3 +39,4 @@ fi
 
 # AWS EB CLI
 export PATH=$PATH:/Users/whocareu2008/.aws-eb-cli/eb/macosx/python2.7/
+export PATH=/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p327/bin:/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/whocareu2008/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/whocareu2008/.rvm/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/whocareu2008/.aws-eb-cli/eb/macosx/python2.7/

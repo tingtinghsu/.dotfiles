@@ -1,21 +1,40 @@
-# Based on robbyrussell's theme, with host and rvm indicators. Example:
-# @host ➜ currentdir rvm:(rubyversion@gemset) git:(branchname)
+# Original theme https://github.com/agnoster zsh theme
 
-# Get the current ruby version in use with RVM:
-if [ -e ~/.rvm/bin/rvm-prompt ]; then
-    RUBY_PROMPT_="%{$fg_bold[blue]%}rvm:(%{$fg[green]%}\$(~/.rvm/bin/rvm-prompt s i v g)%{$fg_bold[blue]%})%{$reset_color%} "
-else
-  if which rbenv &> /dev/null; then
-    RUBY_PROMPT_="%{$fg_bold[blue]%}rbenv:(%{$fg[green]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg_bold[blue]%})%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY='±'
+
+function _git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
+  echo "${ref/refs\/heads\//⭠ }$(parse_git_dirty)"
+}
+
+function _git_info() {
+  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+    local BG_COLOR=green
+    if [[ -n $(parse_git_dirty) ]]; then
+      BG_COLOR=yellow
+      FG_COLOR=black
+    fi
+
+    if [[ ! -z $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
+        BG_COLOR=red
+        FG_COLOR=white
+    fi
+    # echo "%{%K{$BG_COLOR}%}⮀%{%F{$FG_COLOR}%} $(_git_prompt_info) %{%F{$BG_COLOR}%K{blue}%}⮀"
+    echo "%{%K{$BG_COLOR}%}⮀%{%F{$FG_COLOR}%} $(_git_prompt_info) %{%F{$BG_COLOR}%K{magenta}%}⮀"
+  else
+    # echo "%{%K{blue}%}⮀"
+    echo "%{%K{magenta}%}⮀"
   fi
-fi
+}
 
-# Get the host name (first 4 chars)
-HOST_PROMPT_="%{$fg_bold[red]%}@$HOST[0,4] ➜  %{$fg_bold[cyan]%}%c "
-GIT_PROMPT="%{$fg_bold[blue]%}\$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}"
-PROMPT="$HOST_PROMPT_$RUBY_PROMPT_$GIT_PROMPT"
+function virtualenv_info {
+    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
+}
 
-ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+PROMPT_HOST='%{%b%F{gray}%K{black}%} %(?.%{%F{green}%}✔.%{%F{red}%}✘)%{%F{yellow}%} %n %{%F{black}%}'
+PROMPT_DIR='%{%F{white}%} %~%  '
+PROMPT_SU='%(!.%{%k%F{blue}%K{black}%}⮀%{%F{yellow}%} ⚡ %{%k%F{black}%}.%{%k%F{blue}%})⮀%{%f%k%b%}'
+
+PROMPT='%{%f%b%k%}$PROMPT_HOST$(_git_info)%{%F{black}%} $(rvm_prompt_info) %{%F{magenta}%K{blue}%}⮀$PROMPT_DIR$PROMPT_SU
+$(virtualenv_info)❯ '
+RPROMPT='%{$fg[green]%}[%*]%{$reset_color%}'

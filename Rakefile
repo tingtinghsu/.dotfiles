@@ -21,6 +21,7 @@ task :install do
   install_oh_my_zsh
 
   files = Dir['.*'] - %w[. .. .DS_Store .git .oh-my-zsh]
+  files << ".ssh/config"
   files << ".oh-my-zsh/custom/chh.zsh-theme"
   files << Dir.glob(".oh-my-zsh/custom/plugins/*")
 
@@ -42,6 +43,7 @@ task :install do
   end
 
   link_and_copy_files(files)
+  export_path
 
   success_msg
 end
@@ -51,6 +53,10 @@ private
   def run(cmd)
     puts "\033[0;33m[Running]\033[0m #{cmd}"
     `#{cmd}`
+  end
+
+  def export_path
+    `echo "export PATH=$PATH" >> ~/.zshrc`
   end
 
   def success_msg
