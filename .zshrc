@@ -12,12 +12,6 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000000
 SAVEHIST=1000000000
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias blog="cd ~/Code/Project/Octopress/chinghanho"
-alias c="clear"
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -39,4 +33,5 @@ fi
 
 # AWS EB CLI
 export PATH=$PATH:/Users/whocareu2008/.aws-eb-cli/eb/macosx/python2.7/
+export PATH=/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p327/bin:/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/whocareu2008/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/whocareu2008/.rvm/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/whocareu2008/.aws-eb-cli/eb/macosx/python2.7/
 export PATH=/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p327/bin:/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/whocareu2008/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/whocareu2008/.rvm/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/whocareu2008/.aws-eb-cli/eb/macosx/python2.7/

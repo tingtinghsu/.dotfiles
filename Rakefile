@@ -23,6 +23,7 @@ task :install do
   files = Dir['.*'] - %w[. .. .DS_Store .git .oh-my-zsh]
   files << ".ssh/config"
   files << ".oh-my-zsh/custom/chh.zsh-theme"
+  files << ".oh-my-zsh/custom/chh.zsh"
   files << Dir.glob(".oh-my-zsh/custom/plugins/*")
 
   puts "\033[0;32m" + "======================================================" + "\033[0m"
