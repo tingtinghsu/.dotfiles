@@ -32,7 +32,3 @@ PATH=$PATH:$HOME/.rvm/bin
 if [ $(rvm current) = 'system' ]; then
   rvm 1.9.3 --default
 fi
-
-# AWS EB CLI
-export PATH=$PATH:/Users/whocareu2008/.aws-eb-cli/eb/macosx/python2.7/
-export PATH=/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p327/bin:/Users/whocareu2008/.rvm/gems/ruby-1.9.3-p327@global/bin:/Users/whocareu2008/.rvm/rubies/ruby-1.9.3-p327/bin:/Users/whocareu2008/.rvm/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/whocareu2008/.aws-eb-cli/eb/macosx/python2.7/
