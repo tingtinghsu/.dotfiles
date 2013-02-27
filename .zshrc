@@ -23,12 +23,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-# Add RVM to PATH for scripting
+# Initialize RVM
 PATH=$PATH:$HOME/.rvm/bin
-
-# Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-if [ $(rvm current) = 'system' ]; then
-  rvm 1.9.3 --default
-fi
+# if [ $(rvm current) = 'system' ]; then
+#   rvm 2.0.0 --default
+# fi
