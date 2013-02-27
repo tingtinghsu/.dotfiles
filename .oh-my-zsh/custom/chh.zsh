@@ -1,3 +1,2 @@
-alias blog="cd ~/Code/Project/Octopress/chinghanho"
+alias blog="cd ~/Code/Project/octopress/chinghanho"
 alias c="clear"
-alias sourcetree='open -a SourceTree'
