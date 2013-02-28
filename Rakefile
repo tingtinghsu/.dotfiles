@@ -56,9 +56,9 @@ private
     `#{cmd}`
   end
 
-  def export_path
-    `echo "export PATH=$PATH" >> ~/.zshrc`
-  end
+  # def export_path
+  #   `echo "export PATH=$PATH" >> ~/.zshrc`
+  # end
 
   def success_msg
     puts
