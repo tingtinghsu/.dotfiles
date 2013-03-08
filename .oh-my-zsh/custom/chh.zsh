@@ -1,6 +1,6 @@
 alias blog="cd ~/Code/Project/octopress/chinghanho"
 alias c="clear"
 alias dotfiles="cd ~/.dotfiles"
-alias pj="cd ~/Code/Project"
+alias prj="cd ~/Code/Project"
 alias pra="cd ~/Code/Practice"
 alias sdx="cd ~/Code/Sandbox"
