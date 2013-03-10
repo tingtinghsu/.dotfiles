@@ -28,6 +28,7 @@ plugins=(brew
          gem
          history-substring-search
          lol
+         marked
          rails3
          redis-cli
          rvm
