@@ -44,7 +44,6 @@ task :install do
   end
 
   link_and_copy_files(files)
-  # export_path
 
   success_msg
 end
@@ -55,10 +54,6 @@ private
     puts "\033[0;33m[Running]\033[0m #{cmd}"
     `#{cmd}`
   end
-
-  # def export_path
-  #   `echo "export PATH=$PATH" >> ~/.zshrc`
-  # end
 
   def success_msg
     puts
