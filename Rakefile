@@ -15,9 +15,9 @@ task :install do
     install_git_by_homebrew
   end
 
-  if RUBY_PLATFORM.downcase.include?("linux")
+  # if RUBY_PLATFORM.downcase.include?("linux")
     # TODO: install some packages
-  end
+  # end
   install_oh_my_zsh
 
   files = Dir['.*'] - %w[. .. .DS_Store .git .oh-my-zsh]
