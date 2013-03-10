@@ -44,7 +44,7 @@ task :install do
   end
 
   link_and_copy_files(files)
-  export_path
+  # export_path
 
   success_msg
 end
