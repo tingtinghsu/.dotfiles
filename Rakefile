@@ -21,10 +21,10 @@ task :install do
   install_oh_my_zsh
 
   files = Dir['.*'] - %w[. .. .DS_Store .git .oh-my-zsh]
-  files << ".ssh/config"
   files << ".oh-my-zsh/custom/chh.zsh-theme"
   files << ".oh-my-zsh/custom/chh.zsh"
   files << Dir.glob(".oh-my-zsh/custom/plugins/*")
+  files = files.flatten
 
   puts "\033[0;32m" + "======================================================" + "\033[0m"
   puts "\033[0;32m" + "Looking for existing config and backing up it..."       + "\033[0m"
@@ -86,7 +86,7 @@ private
 
       if file =~ /\//
         run %{mkdir -p "$HOME/#{File.dirname(file)}"}
-        run %{cp #{source} #{target}}
+        run %{cp -R #{source} #{target}}
       else
         run %{ln -s #{source} #{target}}
       end
