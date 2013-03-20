@@ -13,3 +13,10 @@ IRB.conf[:HISTORY_FILE] = File.join(ENV["HOME"], ".irb-history")
 
 # Automatic Indentation
 # IRB.conf[:AUTO_INDENT] = true
+
+# interactive editor: use my favorite editor from within irb
+begin
+  require 'interactive_editor'
+rescue LoadError => err
+  warn "Couldn't load interactive_editor: #{err}"
+end
