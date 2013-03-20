@@ -7,4 +7,4 @@
 
 ## TODO
 
-* 把會變動的路徑改掉，例如 export path... 等等之類的。
+* 最近 `rake install` 時，zsh-syntax-highlighting 常出現 Git 的權限問題……
