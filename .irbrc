@@ -16,7 +16,7 @@ IRB.conf[:HISTORY_FILE] = File.join(ENV["HOME"], ".irb-history")
 
 # interactive editor: use my favorite editor from within irb
 begin
-  require 'interactive_editor'
+  require '~/Code/Project/interactive_editor/lib/interactive_editor.rb'
 rescue LoadError => err
   warn "Couldn't load interactive_editor: #{err}"
 end
