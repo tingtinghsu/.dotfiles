@@ -42,7 +42,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Initialize RVM
 PATH=$PATH:$HOME/.rvm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # if [ $(rvm current) = 'system' ]; then
 #   rvm 2.0.0 --default
