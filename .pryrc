@@ -1,6 +1,9 @@
 # Sublime Text FTW
 Pry.config.editor = "subl -w"
 
+# https://github.com/kyrylo/pry-theme
+Pry.config.theme = "pry-modern"
+
 # See https://gist.github.com/807492
 # Use Array.toy to get an array to play with
 class Array
