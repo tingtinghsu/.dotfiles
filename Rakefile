@@ -23,6 +23,7 @@ task :install do
   files = Dir['.*'] - %w[. .. .DS_Store .git .oh-my-zsh]
   files << ".oh-my-zsh/custom/chh.zsh-theme"
   files << ".oh-my-zsh/custom/chh.zsh"
+  files << ".oh-my-zsh/custom/gifify.zsh"
   files << Dir.glob(".oh-my-zsh/custom/plugins/*")
   files = files.flatten
 
