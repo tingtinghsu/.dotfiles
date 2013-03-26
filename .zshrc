@@ -41,7 +41,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Initialize RVM
-PATH=$PATH:$HOME/.rvm/bin
+export PATH="~/.rvm/bin/:$PATH:./.dotfiles/bin"
 
 # if [ $(rvm current) = 'system' ]; then
 #   rvm 2.0.0 --default
