@@ -41,7 +41,6 @@ source ~/.aliases
 
 # Customize to your needs...
 
-# Initialize RVM
 export PATH="~/.rvm/bin/:$PATH:./.dotfiles/bin"
 
 # if [ $(rvm current) = 'system' ]; then
