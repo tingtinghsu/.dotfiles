@@ -36,8 +36,8 @@ plugins=(brew
          vagrant
          zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
 source ~/.aliases
+source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
