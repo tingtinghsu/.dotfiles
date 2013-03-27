@@ -59,3 +59,6 @@ default_command_set = Pry::CommandSet.new do
 end
 
 Pry.config.commands.import default_command_set
+
+# Defined aliases
+Pry.config.commands.alias_command "c", "clear"
