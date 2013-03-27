@@ -1,7 +1,0 @@
-alias blog="cd ~/Code/Project/octopress/chinghanho"
-alias c="clear"
-alias dotfiles="cd ~/.dotfiles"
-alias prj="cd ~/Code/Project"
-alias pra="cd ~/Code/Practice"
-alias sdx="cd ~/Code/Sandbox"
-alias minecraft="java -Xmx1024M -Xms512M -cp ~/Library/Application\ Support/minecraft/bin/MinecraftSP.jar net.minecraft.LauncherFrame"
