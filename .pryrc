@@ -35,7 +35,7 @@ default_command_set = Pry::CommandSet.new do
 
   command "clear" do
     system 'clear'
-    if Rails.env
+    if defined?(Rails)
       output.puts "Rails Environment: #{Rails.env}"
     end
   end
