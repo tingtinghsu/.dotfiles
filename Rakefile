@@ -20,31 +20,18 @@ task :install do
   # end
   install_oh_my_zsh
 
-  files = Dir['.*'] - %w[. .. .DS_Store .git .oh-my-zsh]
-  files << ".oh-my-zsh/custom/chh.zsh-theme"
-  files << ".oh-my-zsh/custom/chh.zsh"
-  files << ".oh-my-zsh/custom/gifify.zsh"
-  files << Dir.glob(".oh-my-zsh/custom/plugins/*")
+  files = Dir['.*'] - %w[. .. .DS_Store .git .gitignore .oh-my-zsh]
+  files << Dir.glob(".oh-my-zsh/custom/*")
   files = files.flatten
+  files.delete_if { |x| x.match(/\.\w+\.sw[a-z]/) }
 
   puts "\033[0;32m" + "======================================================" + "\033[0m"
   puts "\033[0;32m" + "Looking for existing config and backing up it..."       + "\033[0m"
   puts "\033[0;32m" + "======================================================" + "\033[0m"
   puts
 
-  files.each do |file|
-    source = "#{ENV["HOME"]}/#{file}"
-    target = "#{ENV["HOME"]}/.dotfiles_backup/#{file}"
-
-    if File.exists?("#{ENV["HOME"]}/#{file}")
-      puts "\033[0;33mFound ~/#{file}.\033[0m \033[0;32mBacking up to ~/.dotfiles_backup...\033[0m"
-      run %{mkdir -p #{ENV["HOME"]}/.dotfiles_backup} unless File.exists?("#{ENV["HOME"]}/.dotfiles_backup")
-      run %{mkdir -p #{ENV["HOME"]}/.dotfiles_backup/#{File.dirname(file)}} if file =~ /\//
-      run %{mv #{source} #{target}}
-    end
-  end
-
-  link_and_copy_files(files)
+  backup_files(files)
+  link_files(files)
 
   success_msg
 end
@@ -54,6 +41,20 @@ private
   def run(cmd)
     puts "\033[0;33m[Running]\033[0m #{cmd}"
     `#{cmd}`
+  end
+
+  def backup_files(files)
+    files.each do |file|
+      source = "#{ENV["HOME"]}/#{file}"
+      target = "#{ENV["HOME"]}/.dotfiles_backup/#{file}"
+
+      if File.exists?("#{ENV["HOME"]}/#{file}")
+        puts "\033[0;33mFound ~/#{file}.\033[0m \033[0;32mBacking up to ~/.dotfiles_backup...\033[0m"
+        run %{mkdir -p #{ENV["HOME"]}/.dotfiles_backup} unless File.exists?("#{ENV["HOME"]}/.dotfiles_backup")
+        run %{mkdir -p #{ENV["HOME"]}/.dotfiles_backup/#{File.dirname(file)}} if file =~ /\//
+        run %{mv #{source} #{target}}
+      end
+    end
   end
 
   def success_msg
@@ -69,10 +70,10 @@ private
     puts
   end
 
-  def link_and_copy_files(files)
+  def link_files(files)
     puts
     puts "\033[0;32m" + "======================================================" + "\033[0m"
-    puts "\033[0;32m" + "Setting up symbol link and copying files..."            + "\033[0m"
+    puts "\033[0;32m" + "Setting up symbol link files..."                        + "\033[0m"
     puts "\033[0;32m" + "======================================================" + "\033[0m"
     puts
 
@@ -80,12 +81,7 @@ private
       source = "#{ENV["PWD"]}/#{file}"
       target = "#{ENV["HOME"]}/#{file}"
 
-      if file =~ /\//
-        run %{mkdir -p "$HOME/#{File.dirname(file)}"}
-        run %{cp -R #{source} #{target}}
-      else
-        run %{ln -s #{source} #{target}}
-      end
+      run %{ln -s #{source} #{target}}
     end
   end
 
