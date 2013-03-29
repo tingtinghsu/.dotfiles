@@ -32,7 +32,6 @@ task :install do
 
   backup_files(files)
   link_files(files)
-
   success_msg
 end
 
@@ -41,20 +40,6 @@ private
   def run(cmd)
     puts "\033[0;33m[Running]\033[0m #{cmd}"
     `#{cmd}`
-  end
-
-  def backup_files(files)
-    files.each do |file|
-      source = "#{ENV["HOME"]}/#{file}"
-      target = "#{ENV["HOME"]}/.dotfiles_backup/#{file}"
-
-      if File.exists?("#{ENV["HOME"]}/#{file}")
-        puts "\033[0;33mFound ~/#{file}.\033[0m \033[0;32mBacking up to ~/.dotfiles_backup...\033[0m"
-        run %{mkdir -p #{ENV["HOME"]}/.dotfiles_backup} unless File.exists?("#{ENV["HOME"]}/.dotfiles_backup")
-        run %{mkdir -p #{ENV["HOME"]}/.dotfiles_backup/#{File.dirname(file)}} if file =~ /\//
-        run %{mv #{source} #{target}}
-      end
-    end
   end
 
   def success_msg
@@ -68,6 +53,19 @@ private
     puts
     puts "CHHDF has been installed. Please restart your terminal."
     puts
+  end
+
+  def backup_files(files)
+    run %{mkdir -p #{ENV["HOME"]}/.dotfiles_backup} unless File.exists?("#{ENV["HOME"]}/.dotfiles_backup")
+
+    files.each do |file|
+      target = "#{ENV["HOME"]}/#{file}"
+
+      if File.exist?("#{target}")
+        run %{rm -rf #{target}} if File.symlink?("#{target}")
+        run %{mv #{target} #{ENV["HOME"]}/.dotfiles_backup} if File.file?("#{target}") || File.directory?("#{target}")
+      end
+    end
   end
 
   def link_files(files)
