@@ -12,3 +12,5 @@ set autoread                 " auto read when file is changed from outside
 set guifont=Monaco:h14
 set t_Co=256
 set cursorline
+
+nnoremap <silent> <F5> :NERDTree<CR>
