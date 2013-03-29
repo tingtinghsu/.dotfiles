@@ -1,7 +1,7 @@
 " auto load all plugins in vim bundle
 execute pathogen#infect()
 
-filetype plugin indent on     " enable filetype-specific plugins
+filetype plugin indent on    " enable filetype-specific plugins
 set history=50               " keep 50 lines of command line history
 set number                   " enable line numbers
 set autoindent               " enable autoindent
