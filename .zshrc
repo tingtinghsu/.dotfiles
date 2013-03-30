@@ -41,6 +41,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Load NVM
+. ~/.nvm/nvm.sh
+
 export PATH="~/.rvm/bin/:$PATH:./.dotfiles/bin"
 
 # if [ $(rvm current) = 'system' ]; then
