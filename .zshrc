@@ -44,8 +44,6 @@ SAVEHIST=1000000000
 # Load NVM
 . ~/.nvm/nvm.sh
 
-export PATH="~/.rvm/bin/:$PATH:./.dotfiles/bin"
-
 # if [ $(rvm current) = 'system' ]; then
 #   rvm 2.0.0 --default
 # fi
