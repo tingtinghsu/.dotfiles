@@ -10,11 +10,6 @@ ZSH_THEME="chh"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-## Command history configuration
-HISTFILE=$HOME/.zsh_history
-HISTSIZE=1000000000
-SAVEHIST=1000000000
-
 export BUNDLER_EDITOR=subl
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -40,6 +35,11 @@ source ~/.aliases
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+## Command history configuration
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=1000000000
+SAVEHIST=1000000000
 
 # Load NVM
 . ~/.nvm/nvm.sh
