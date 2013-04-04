@@ -48,6 +48,9 @@ SAVEHIST=1000000000
 # Load NVM
 . ~/.nvm/nvm.sh
 
+# virtualenv wrapper
+source /usr/local/share/python/virtualenvwrapper_lazy.sh
+
 # if [ $(rvm current) = 'system' ]; then
 #   rvm 2.0.0 --default
 # fi

@@ -4,6 +4,9 @@ export PATH="$HOME/.dotfiles/bin:$PATH"
 # add Python scripts directory to PATH
 export PATH="/usr/local/share/python:$PATH"
 
+# virtualenv wrapper
+export WORKON_HOME=$HOME/.virtualenvs
+
 export BUNDLER_EDITOR=subl
 
 export CLICOLOR=1                        # 啟用顏色
