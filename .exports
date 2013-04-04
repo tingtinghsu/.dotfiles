@@ -1,4 +1,8 @@
-export PATH="$PATH:$HOME/.dotfiles/bin"
+# export excutable in dotfiles
+export PATH="$HOME/.dotfiles/bin:$PATH"
+
+# add Python scripts directory to PATH
+export PATH="/usr/local/share/python:$PATH"
 
 export BUNDLER_EDITOR=subl
 
