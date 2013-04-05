@@ -27,6 +27,8 @@ function _git_info() {
   fi
 }
 
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
