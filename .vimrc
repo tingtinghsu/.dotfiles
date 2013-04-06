@@ -15,3 +15,7 @@ set cursorline
 
 " open sidebar with cmd+k 
 map <D-k> :NERDTreeToggle<CR>
+
+" comment lines with cmd+/
+map <D-/> :TComment<cr>
+vmap <D-/> :TComment<cr>gv
