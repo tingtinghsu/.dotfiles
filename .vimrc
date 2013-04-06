@@ -13,4 +13,5 @@ set guifont=Monaco:h14
 set t_Co=256
 set cursorline
 
-nnoremap <silent> <F5> :NERDTree<CR>
+" open sidebar with cmd+k 
+map <D-k> :NERDTreeToggle<CR>
