@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+#
+# String Handler
+#
+# 因為太常需要把 "123-456-789" 這類轉為 "123.456.789" 這樣的字串
+# 每次手動改太麻煩，所以乾脆寫個小程式幫忙轉。XD
+#
+# 用法是將執行檔放在 PATH 路徑中，然後執行 `sth 123-456-789`。
+#
+# 未來會看需求陸續增加更多轉換條件。
+#
+
+def pbcopy(input)
+  str = input.to_s
+  IO.popen('pbcopy', 'w') { |f| f << str }
+  str
+end
+
+result = case ARGV.shift
+  when /^[\d*-]+\d$/ then $~.to_s.split("-").join(".")
+end
+
+pbcopy(result)
+puts "Result is: #{result}"
