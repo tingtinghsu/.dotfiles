@@ -25,7 +25,9 @@ plugins=(brew
          rails3
          redis-cli
          rvm
+         safe-paste
          sublime
+         tmux
          vagrant
          zsh-syntax-highlighting)
 
