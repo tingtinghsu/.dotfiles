@@ -1,7 +1,14 @@
 " auto load all plugins in vim bundle
-execute pathogen#infect()
+let g:pathogen_disabled = []
+if !has('gui_running')
+   call add(g:pathogen_disabled, 'vim-powerline')
+endif
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 filetype plugin indent on    " enable filetype-specific plugins
+set nocompatible	     " not compatible with the old-fashion vi mode
 set history=50               " keep 50 lines of command line history
 set number                   " enable line numbers
 set autoindent               " enable autoindent
@@ -19,3 +26,9 @@ map <D-k> :NERDTreeToggle<CR>
 " comment lines with cmd+/
 map <D-/> :TComment<cr>
 vmap <D-/> :TComment<cr>gv
+
+" status line {
+set laststatus=2
+
+" --- PowerLine
+let g:Powerline_symbols = 'fancy' " require fontpatcher
