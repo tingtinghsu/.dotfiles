@@ -1,3 +1,6 @@
+# ---------------------------------------------------------
+# Oh-My-ZSH Configuration
+# ---------------------------------------------------------
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -6,6 +9,9 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="chh"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -33,7 +39,9 @@ plugins=(brew
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# ---------------------------------------------------------
+# Customizations
+# ---------------------------------------------------------
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
@@ -47,14 +55,15 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000000
 SAVEHIST=1000000000
 
-# Load NVM
-. ~/.nvm/nvm.sh
+. ~/.nvm/nvm.sh # Load NVM
 
 # virtualenv wrapper
 source /usr/local/share/python/virtualenvwrapper_lazy.sh
 
+# ----------------------------------------
+# Miscellaneous
+# ----------------------------------------
+
 # if [ $(rvm current) = 'system' ]; then
 #   rvm 2.0.0 --default
 # fi
-
-DISABLE_AUTO_TITLE=true
