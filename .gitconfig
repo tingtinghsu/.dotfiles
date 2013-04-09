@@ -34,10 +34,10 @@
 	ign = ls-files -o -i --exclude-standard
 [core]
 	excludesfile = /Users/whocareu2008/.gitignore_global
-	editor = subl -n -w
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
