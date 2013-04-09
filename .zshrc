@@ -56,3 +56,5 @@ source /usr/local/share/python/virtualenvwrapper_lazy.sh
 # if [ $(rvm current) = 'system' ]; then
 #   rvm 2.0.0 --default
 # fi
+
+DISABLE_AUTO_TITLE=true
