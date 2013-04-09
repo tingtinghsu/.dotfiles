@@ -11,3 +11,5 @@ export BUNDLER_EDITOR=subl
 
 export CLICOLOR=1                        # 啟用顏色
 export LSCOLORS="Gxfxcxdxbxegedabagacad" # 設置顏色
+
+export EDITOR="subl"
