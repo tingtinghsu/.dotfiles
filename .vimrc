@@ -1,11 +1,5 @@
 " auto load all plugins in vim bundle
-let g:pathogen_disabled = []
-if !has('gui_running')
-   call add(g:pathogen_disabled, 'vim-powerline')
-endif
-
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
 
 filetype plugin indent on    " enable filetype-specific plugins
 set nocompatible	     " not compatible with the old-fashion vi mode
