@@ -10,6 +10,11 @@ syntax on                    " enable syntax highlighting
 colors Tomorrow-Night-Bright " vim color scheme
 set autoread                 " auto read when file is changed from outside
 
+" Hide toolbar and scrollbars in MacVim
+set guioptions-=T
+set guioptions-=L
+set guioptions-=r
+
 set guifont=Monaco:h14
 set t_Co=256
 set cursorline
