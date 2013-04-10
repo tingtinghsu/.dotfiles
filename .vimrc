@@ -15,6 +15,12 @@ set guioptions-=T
 set guioptions-=L
 set guioptions-=r
 
+" to move effeciently between splits
+nmap gh <C-w>h
+nmap gj <C-w>j
+nmap gk <C-w>k
+nmap gl <C-w>l
+
 set guifont=Monaco:h14
 set t_Co=256
 set cursorline
