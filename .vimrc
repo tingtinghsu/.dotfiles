@@ -1,6 +1,7 @@
 " auto load all plugins in vim bundle
 execute pathogen#infect()
 
+" general
 filetype plugin indent on    " enable filetype-specific plugins
 set nocompatible	     " not compatible with the old-fashion vi mode
 set history=50               " keep 50 lines of command line history
@@ -9,6 +10,11 @@ set autoindent               " enable autoindent
 syntax on                    " enable syntax highlighting
 colors Tomorrow-Night-Bright " vim color scheme
 set autoread                 " auto read when file is changed from outside
+if has("gui_running")        " GUI color and font settings
+  set guifont=Monaco:h14
+  set t_Co=256               " 256 color mode
+  set cursorline             " highlight current line
+end
 
 " Hide toolbar and scrollbars in MacVim
 set guioptions-=T
@@ -21,11 +27,8 @@ nmap gj <C-w>j
 nmap gk <C-w>k
 nmap gl <C-w>l
 
-set guifont=Monaco:h14
-set t_Co=256
-set cursorline
 
-" open sidebar with cmd+k 
+" open sidebar with cmd+k
 map <D-k> :NERDTreeToggle<CR>
 
 " comment lines with cmd+/
