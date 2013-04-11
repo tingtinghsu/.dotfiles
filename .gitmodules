@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/bundle/vim-autoclose"]
+	path = .vim/bundle/vim-autoclose
+	url = git://github.com/Townk/vim-autoclose.git
