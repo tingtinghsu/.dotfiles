@@ -56,3 +56,7 @@ set laststatus=2
 
 " --- PowerLine
 let g:Powerline_symbols = 'fancy' " require fontpatcher
+
+" --- vim-gitgutter
+let g:gitgutter_enabled = 1
+highlight clear SignColumn " For the same appearance as your line number column
