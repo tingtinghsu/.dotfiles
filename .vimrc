@@ -23,6 +23,12 @@ set showmode		     " Show current mode
 
 set expandtab "replace <TAB> with spaces
 
+" disable sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
 " Hide toolbar and scrollbars in MacVim
 set guioptions-=T
 set guioptions-=L
