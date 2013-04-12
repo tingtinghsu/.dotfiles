@@ -24,8 +24,6 @@ set clipboard=unnamed	     " yank to the system register (*) by default
 set showmatch                " Cursor shows matching ) and }
 set showmode		     " Show current mode
 
-set expandtab "replace <TAB> with spaces
-
 " disable sound on errors
 set noeb vb t_vb=
 
