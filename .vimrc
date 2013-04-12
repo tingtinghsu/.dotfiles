@@ -3,7 +3,7 @@ execute pathogen#infect()
 
 " general
 filetype plugin indent on    " enable filetype-specific plugins
-set nocompatible	     " not compatible with the old-fashion vi mode
+set nocompatible	           " not compatible with the old-fashion vi mode
 set history=50               " keep 50 lines of command line history
 set number                   " enable line numbers
 set autoindent               " enable autoindent
@@ -13,16 +13,16 @@ set shiftwidth=2             " the number of space characters inserted for inden
 syntax on                    " enable syntax highlighting
 colors Tomorrow-Night-Bright " vim color scheme
 set autoread                 " auto read when file is changed from outside
-set history=50		     " keep 50 lines of command line history
+set history=50		           " keep 50 lines of command line history
 set mouse=a                  " mouse support
 if has("gui_running")        " GUI color and font settings
   set guifont=Monaco:h14
   set t_Co=256               " 256 color mode
   set cursorline             " highlight current line
 end
-set clipboard=unnamed	     " yank to the system register (*) by default
+set clipboard=unnamed	       " yank to the system register (*) by default
 set showmatch                " Cursor shows matching ) and }
-set showmode		     " Show current mode
+set showmode		             " Show current mode
 
 " disable sound on errors
 set noeb vb t_vb=
