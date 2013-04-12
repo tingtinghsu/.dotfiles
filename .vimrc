@@ -7,6 +7,9 @@ set nocompatible	     " not compatible with the old-fashion vi mode
 set history=50               " keep 50 lines of command line history
 set number                   " enable line numbers
 set autoindent               " enable autoindent
+set expandtab                " use space instead of tab
+set tabstop=2                " insert 2 spaces for a tab
+set shiftwidth=2             " the number of space characters inserted for indentation
 syntax on                    " enable syntax highlighting
 colors Tomorrow-Night-Bright " vim color scheme
 set autoread                 " auto read when file is changed from outside
