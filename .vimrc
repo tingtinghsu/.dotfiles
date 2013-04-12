@@ -66,3 +66,6 @@ highlight clear SignColumn " For the same appearance as your line number column
 
 " --- tagbar
 nmap <D-\> :TagbarToggle<CR>
+
+" --- ctrlp
+let g:ctrlp_show_hidden = 1
