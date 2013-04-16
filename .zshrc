@@ -28,7 +28,7 @@ plugins=(brew
          history-substring-search
          lol
          marked
-         nvm
+         npm
          rails3
          redis-cli
          rvm
