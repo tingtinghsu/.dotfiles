@@ -28,6 +28,7 @@ plugins=(brew
          history-substring-search
          lol
          marked
+         nvm
          rails3
          redis-cli
          rvm
@@ -55,7 +56,7 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000000
 SAVEHIST=1000000000
 
-. ~/.nvm/nvm.sh # Load NVM
+. ~/nvm/nvm.sh # Load NVM
 
 # virtualenv wrapper
 source /usr/local/share/python/virtualenvwrapper_lazy.sh
