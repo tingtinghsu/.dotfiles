@@ -23,6 +23,7 @@ plugins=(brew
          bundler
          capistrano
          git
+         git-extras
          git-flow
          gem
          history-substring-search
