@@ -27,7 +27,6 @@ plugins=(brew
          git-flow
          gem
          history-substring-search
-         lol
          marked
          npm
          rails3
