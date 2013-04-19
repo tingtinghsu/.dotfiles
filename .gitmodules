@@ -38,3 +38,6 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".oh-my-zsh/custom/plugins/zsh-output-highlighting"]
+	path = .oh-my-zsh/custom/plugins/zsh-output-highlighting
+	url = git://github.com/rricard/zsh-output-highlighting.git

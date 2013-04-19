@@ -37,6 +37,7 @@ plugins=(brew
          sublime
          tmux
          vagrant
+         zsh-output-highlighting
          zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
