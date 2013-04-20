@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# 用這個之前要先安裝 tor，建議安裝方式用 Homebrew
+# 然後使用這個腳本可以快速啟用 tor 的代理隱藏自己的 IP
+# Ctrl + C 之後就會恢復正常
+
+INTERFACE=Wi-Fi
+networksetup -setsocksfirewallproxy $INTERFACE 127.0.0.1 9050 off
+networksetup -setsocksfirewallproxystate $INTERFACE on
+tor
+networksetup -setsocksfirewallproxystate $INTERFACE off
