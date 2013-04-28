@@ -73,4 +73,5 @@ highlight clear SignColumn " For the same appearance as your line number column
 nmap <D-\> :TagbarToggle<CR>
 
 " --- ctrlp
+let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_show_hidden = 1
