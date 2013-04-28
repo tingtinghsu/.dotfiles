@@ -1,2 +1,11 @@
-import rlcompleter, readline
+import rlcompleter
+import readline
+import os
+
+
 readline.parse_and_bind('tab:complete')
+
+
+# clear python interpreter console
+def cls():
+    os.system(['clear', 'cls'][os.name == 'nt'])
