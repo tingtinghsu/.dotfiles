@@ -1,5 +1,4 @@
-# Sublime Text FTW
-Pry.config.editor = "subl -w"
+Pry.config.editor = "vim"
 
 # https://github.com/kyrylo/pry-theme
 Pry.config.theme = "pry-modern"
