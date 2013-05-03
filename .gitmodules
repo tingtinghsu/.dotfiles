@@ -41,3 +41,6 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-output-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-output-highlighting
 	url = git://github.com/rricard/zsh-output-highlighting.git
+[submodule ".vim/bundle/vim-easymotion"]
+	path = .vim/bundle/vim-easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
