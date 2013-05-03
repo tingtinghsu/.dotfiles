@@ -72,3 +72,6 @@ source /usr/local/share/python/virtualenvwrapper_lazy.sh
 # if [ $(rvm current) = 'system' ]; then
 #   rvm 2.0.0 --default
 # fi
+
+# Now I can copy-paste commands with a dollar in front into zsh :)
+$ () { "$@" }
