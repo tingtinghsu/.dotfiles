@@ -18,8 +18,11 @@ set mouse=a                  " mouse support
 if has("gui_running")        " GUI color and font settings
   set guifont=Monaco:h14
   set t_Co=256               " 256 color mode
-  set cursorline             " highlight current line
 end
+if has("gui_macvim")         " macvim shift movement
+  let macvim_hig_shift_movement = 1
+endif
+set cursorline               " highlight current line
 set clipboard=unnamed	       " yank to the system register (*) by default
 set showmatch                " Cursor shows matching ) and }
 set showmode		             " Show current mode
