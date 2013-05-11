@@ -8,6 +8,9 @@ alias l="ls -lp"                           # 清單列表不隱藏的資料夾�
 alias ls="ls -lp"
 alias ld='ls -l ${colorflag} | grep "^d"'  # 清單列表只列出資料夾
 
+alias -s rb="vim"
+alias -s log="less -MN"
+
 # 抄捷徑啦
 alias c="clear"
 alias s="subl ."
