@@ -20,8 +20,9 @@ task :install do
   # end
   install_oh_my_zsh
 
-  files = Dir['.*'] - %w[. .. .DS_Store .git .gitignore .oh-my-zsh]
+  files = Dir['.*'] - %w[. .. .DS_Store .git .gitignore .oh-my-zsh .config]
   files << Dir.glob(".oh-my-zsh/custom/*")
+  files << Dir.glob(".config/fish/*")
   files = files.flatten
   files.delete_if { |x| x.match(/\.\w+\.sw[a-z]/) }
 
