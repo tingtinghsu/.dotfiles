@@ -32,6 +32,7 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
 	ign = ls-files -o -i --exclude-standard
+  lolc = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
 	excludesfile = /Users/whocareu2008/.gitignore_global
 	editor = vim
