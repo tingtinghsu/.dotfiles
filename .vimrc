@@ -1,9 +1,46 @@
-" auto load all plugins in vim bundle
-execute pathogen#infect()
+" Vundle
+set nocompatible             " not compatible with the old-fashion vi mode
+filetype off                 " required!
+
+" http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+" Setting up Vundle - the vim plugin bundler
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+  echo "Installing Vundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let iCanHazVundle=0
+endif
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'airblade/vim-gitgutter'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'Townk/vim-autoclose'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'majutsushi/tagbar'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'honza/vim-snippets'
+Bundle 'garbas/vim-snipmate'
+
 
 " general
 filetype plugin indent on    " enable filetype-specific plugins
-set nocompatible	           " not compatible with the old-fashion vi mode
 set history=50               " keep 50 lines of command line history
 set number                   " enable line numbers
 set autoindent               " enable autoindent
@@ -13,7 +50,7 @@ set shiftwidth=2             " the number of space characters inserted for inden
 syntax on                    " enable syntax highlighting
 colors Tomorrow-Night-Bright " vim color scheme
 set autoread                 " auto read when file is changed from outside
-set history=50		           " keep 50 lines of command line history
+set history=50               " keep 50 lines of command line history
 set mouse=a                  " mouse support
 if has("gui_running")        " GUI color and font settings
   set guifont=Monaco:h14
@@ -23,10 +60,12 @@ if has("gui_macvim")         " macvim shift movement
   let macvim_hig_shift_movement = 1
 endif
 set cursorline               " highlight current line
-set clipboard=unnamed	       " yank to the system register (*) by default
+set clipboard=unnamed        " yank to the system register (*) by default
 set showmatch                " Cursor shows matching ) and }
-set showmode		             " Show current mode
+set showmode                 " Show current mode
 set backspace=2              " make backspace work like most other apps
+
+
 
 " tmux will only forward escape sequences to the terminal if surrounded by a DCS sequence
 " http://sourceforge.net/mailarchive/forum.php?thread_name=AANLkTinkbdoZ8eNR1X2UobLTeww1jFrvfJxTMfKSq-L%2B%40mail.gmail.com&forum_name=tmux-users
@@ -47,7 +86,7 @@ set guioptions-=L
 set guioptions-=r
 
 " add spell checking and automatic wrapping at the
-" recommended 72 columns to you commit messages 
+" recommended 72 columns to you commit messages
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " to move effeciently between splits
@@ -65,7 +104,7 @@ cnoremap <C-K>      <C-U>
 map <D-k> :NERDTreeToggle<CR>
 
 " encoding settings
-set encoding=utf-8                                  
+set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 
