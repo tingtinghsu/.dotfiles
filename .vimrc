@@ -134,7 +134,7 @@ vmap <D-/> :TComment<cr>gv
 
 " --- NerdTree
 " open sidebar with cmd+k
-map <D-k> :NERDTreeToggle<CR>
+map <C-k> :NERDTreeToggle<CR>
 
 " --- PowerLine
 let g:Powerline_symbols = 'fancy' " require fontpatcher
