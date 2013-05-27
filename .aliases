@@ -34,6 +34,8 @@ alias todo="subl --project ~/Dropbox/Documents/TODO/todo.sublime-project"
 # Minecraft!!
 alias minecraft="java -Xmx1024M -Xms512M -cp ~/Library/Application\ Support/minecraft/bin/MinecraftSP.jar net.minecraft.LauncherFrame"
 
+alias coffitivity="open -a /Applications/MPlayerX.app ~/Dropbox/Music/Coffitivity.mp3 --args -file -volume 50 -StartByFullScreen NO"
+
 # virtualenvwrapper
 alias v="workon"
 alias vls="lsvirtualenv"
