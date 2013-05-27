@@ -39,6 +39,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'mattn/zencoding-vim'
 
 "
 "----------------- End Vundle --------------
