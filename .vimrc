@@ -1,4 +1,5 @@
-" Vundle
+"----------------- Vundle ----------------
+"
 set nocompatible             " not compatible with the old-fashion vi mode
 filetype off                 " required!
 
@@ -39,9 +40,20 @@ Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'davidhalter/jedi-vim'
 
+"
+"----------------- End Vundle --------------
 
-" general
+
+
+
+
+
+"----------------- General ------------------
+"
+
 filetype plugin indent on    " enable filetype-specific plugins
+filetype plugin on           " enable loading the plugin files for specific file types
+filetype indent on           " enable loading the indent file for specific file types
 set history=50               " keep 50 lines of command line history
 set number                   " enable line numbers
 set autoindent               " enable autoindent
@@ -53,10 +65,8 @@ colors Tomorrow-Night-Bright " vim color scheme
 set autoread                 " auto read when file is changed from outside
 set history=50               " keep 50 lines of command line history
 set mouse=a                  " mouse support
-if has("gui_running")        " GUI color and font settings
-  set guifont=Monaco:h14
-  set t_Co=256               " 256 color mode
-end
+set guifont=Monaco:h14
+set t_Co=256                 " 256 color mode
 if has("gui_macvim")         " macvim shift movement
   let macvim_hig_shift_movement = 1
 endif
@@ -65,6 +75,20 @@ set clipboard=unnamed        " yank to the system register (*) by default
 set showmatch                " Cursor shows matching ) and }
 set showmode                 " Show current mode
 set backspace=2              " make backspace work like most other apps
+set noeb vb t_vb=            " disable sound on errors
+set laststatus=2             " status line
+
+" encoding settings
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+
+"
+"------------------- End General ------------------
+
+
+
+
 
 
 
@@ -78,8 +102,6 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" disable sound on errors
-set noeb vb t_vb=
 
 " Hide toolbar and scrollbars in MacVim
 set guioptions-=T
@@ -101,20 +123,17 @@ cnoremap <C-A>      <Home>
 cnoremap <C-E>      <End>
 cnoremap <C-K>      <C-U>
 
-" open sidebar with cmd+k
-map <D-k> :NERDTreeToggle<CR>
+" ---------------- Plugin ---------------------
+"  
 
-" encoding settings
-set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-
+" --- TComment
 " comment lines with cmd+/
 map <D-/> :TComment<cr>
 vmap <D-/> :TComment<cr>gv
 
-" status line {
-set laststatus=2
+" --- NerdTree
+" open sidebar with cmd+k
+map <D-k> :NERDTreeToggle<CR>
 
 " --- PowerLine
 let g:Powerline_symbols = 'fancy' " require fontpatcher
@@ -129,3 +148,6 @@ nmap <D-\> :TagbarToggle<CR>
 " --- ctrlp
 let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_show_hidden = 1
+
+"
+" -------------- End Plugin --------------------
