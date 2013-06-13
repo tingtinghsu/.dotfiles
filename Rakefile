@@ -1,12 +1,15 @@
 # encoding: UTF-8
 require "rake"
 
+GREEN = "\033[0;32m"
+NONE  = "\033[0m"
+
 desc "install dot files to $HOME directory"
 task :install do
   puts
-  puts "\033[0;32m" + "======================================================" + "\033[0m"
-  puts "\033[0;32m" + "Welcome to Ching-Han Ho's DotFiles Installation."       + "\033[0m"
-  puts "\033[0;32m" + "======================================================" + "\033[0m"
+  puts GREEN + "======================================================" + NONE
+  puts GREEN + "Welcome to Ching-Han Ho's DotFiles Installation."       + NONE
+  puts GREEN + "======================================================" + NONE
   puts
 
   # Because we need git when we install oh-my-zsh
@@ -26,9 +29,9 @@ task :install do
   files = files.flatten
   files.delete_if { |x| x.match(/\.\w+\.sw[a-z]/) }
 
-  puts "\033[0;32m" + "======================================================" + "\033[0m"
-  puts "\033[0;32m" + "Looking for existing config and backing up it..."       + "\033[0m"
-  puts "\033[0;32m" + "======================================================" + "\033[0m"
+  puts GREEN + "======================================================" + NONE
+  puts GREEN + "Looking for existing config and backing up it..."       + NONE
+  puts GREEN + "======================================================" + NONE
   puts
 
   backup_files(files)
@@ -45,12 +48,12 @@ private
 
   def success_msg
     puts
-    puts "\033[0;32m" + "  _____ _    _ _    _ _____  ______ " + "\033[0m"
-    puts "\033[0;32m" + " / ____| |  | | |  | |  __ \\|  ____|" + "\033[0m"
-    puts "\033[0;32m" + "| |    | |__| | |__| | |  | | |__   " + "\033[0m"
-    puts "\033[0;32m" + "| |    |  __  |  __  | |  | |  __|  " + "\033[0m"
-    puts "\033[0;32m" + "| |____| |  | | |  | | |__| | |     " + "\033[0m"
-    puts "\033[0;32m" + " \\_____|_|  |_|_|  |_|_____/|_|     " + "\033[0m"
+    puts GREEN + "  _____ _    _ _    _ _____  ______ " + NONE
+    puts GREEN + " / ____| |  | | |  | |  __ \\|  ____|" + NONE
+    puts GREEN + "| |    | |__| | |__| | |  | | |__   " + NONE
+    puts GREEN + "| |    |  __  |  __  | |  | |  __|  " + NONE
+    puts GREEN + "| |____| |  | | |  | | |__| | |     " + NONE
+    puts GREEN + " \\_____|_|  |_|_|  |_|_____/|_|     " + NONE
     puts
     puts "CHHDF has been installed. Please restart your terminal."
     puts
@@ -71,9 +74,9 @@ private
 
   def link_files(files)
     puts
-    puts "\033[0;32m" + "======================================================" + "\033[0m"
-    puts "\033[0;32m" + "Setting up symbol link files..."                        + "\033[0m"
-    puts "\033[0;32m" + "======================================================" + "\033[0m"
+    puts GREEN + "======================================================" + NONE
+    puts GREEN + "Setting up symbol link files..."                        + NONE
+    puts GREEN + "======================================================" + NONE
     puts
 
     files.each do |file|
@@ -85,11 +88,11 @@ private
   end
 
   def install_oh_my_zsh
-    puts "\033[0;32m" + "======================================================" + "\033[0m"
-    puts "\033[0;32m" + "Installing oh-my-zsh"                                   + "\033[0m"
-    puts "\033[0;32m" + "A handful of functions, auto-complete helpers,"         + "\033[0m"
-    puts "\033[0;32m" + "and stuff that makes you shout..."                      + "\033[0m"
-    puts "\033[0;32m" + "======================================================" + "\033[0m"
+    puts GREEN + "======================================================" + NONE
+    puts GREEN + "Installing oh-my-zsh"                                   + NONE
+    puts GREEN + "A handful of functions, auto-complete helpers,"         + NONE
+    puts GREEN + "and stuff that makes you shout..."                      + NONE
+    puts GREEN + "======================================================" + NONE
     puts
 
     oh_my_zsh = "#{ENV["HOME"]}/.oh-my-zsh"
@@ -103,22 +106,22 @@ private
   end
 
   def install_git_by_homebrew
-    puts "\033[0;32m" + "======================================================" + "\033[0m"
-    puts "\033[0;32m" + "Installing Homebrew git package..."                     + "\033[0m"
-    puts "\033[0;32m" + "There may be some warnings."                            + "\033[0m"
-    puts "\033[0;32m" + "It will ignore if git is already installed."            + "\033[0m"
-    puts "\033[0;32m" + "======================================================" + "\033[0m"
+    puts GREEN + "======================================================" + NONE
+    puts GREEN + "Installing Homebrew git package..."                     + NONE
+    puts GREEN + "There may be some warnings."                            + NONE
+    puts GREEN + "It will ignore if git is already installed."            + NONE
+    puts GREEN + "======================================================" + NONE
     run %{brew install git}
     puts
   end
 
   def install_homebrew
-    puts "\033[0;32m" + "======================================================" + "\033[0m"
-    puts "\033[0;32m" + "Installing Homebrew, the OSX package manager...If it's" + "\033[0m"
-    puts "\033[0;32m" + "already installed, this will do nothing."               + "\033[0m"
-    puts "\033[0;32m" + "======================================================" + "\033[0m"
+    puts GREEN + "======================================================" + NONE
+    puts GREEN + "Installing Homebrew, the OSX package manager...If it's" + NONE
+    puts GREEN + "already installed, this will do nothing."               + NONE
+    puts GREEN + "======================================================" + NONE
     run %{ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"}
     puts
   end
 
-# "\033[0;32m" + "\033[0m"
+# "\033[0;32m" + NONE
