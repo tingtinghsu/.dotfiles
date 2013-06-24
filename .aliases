@@ -44,3 +44,6 @@ alias vquit="deactivate"
 alias vmk="mkvirtualenv"
 alias vrm="rmvirtualenv"
 alias vswitch="workon"
+
+# 有用的東西
+alias ip="curl ipecho.net/plain; echo"
