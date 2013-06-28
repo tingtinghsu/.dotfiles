@@ -31,10 +31,10 @@ plugins=(bower
          marked
          npm
          rails3
+         rails4
          redis-cli
          rvm
          safe-paste
-         sublime
          tmux
          vagrant
          zsh-output-highlighting
@@ -76,3 +76,5 @@ source /usr/local/share/python/virtualenvwrapper_lazy.sh
 
 # Now I can copy-paste commands with a dollar in front into zsh :)
 $ () { "$@" }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
