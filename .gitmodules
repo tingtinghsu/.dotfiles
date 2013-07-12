@@ -4,3 +4,6 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-output-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-output-highlighting
 	url = git://github.com/rricard/zsh-output-highlighting.git
+[submodule ".oh-my-zsh/custom/plugins/zaw"]
+	path = .oh-my-zsh/custom/plugins/zaw
+	url = git://github.com/zsh-users/zaw.git

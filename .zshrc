@@ -37,6 +37,7 @@ plugins=(bower
          safe-paste
          tmux
          vagrant
+         zaw
          zsh-output-highlighting
          zsh-syntax-highlighting)
 
