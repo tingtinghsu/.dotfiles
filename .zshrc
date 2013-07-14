@@ -36,6 +36,7 @@ plugins=(bower
          rvm
          safe-paste
          tmux
+         tmuxinator
          vagrant
          zaw
          zsh-output-highlighting
@@ -66,6 +67,9 @@ SAVEHIST=1000000000
 
 # virtualenv wrapper
 source /usr/local/share/python/virtualenvwrapper_lazy.sh
+
+# Tmuxinator Environment Integration
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # ----------------------------------------
 # Miscellaneous

@@ -1,6 +1,7 @@
 # encoding: UTF-8
 require "rake"
 
+# 實體表。實體名稱與 shell 顏色色碼的對照。
 GREEN = "\033[0;32m"
 NONE  = "\033[0m"
 
@@ -15,7 +16,7 @@ task :install do
   # Because we need git when we install oh-my-zsh
   if RUBY_PLATFORM.downcase.include?("darwin")
     install_homebrew
-    install_git_by_homebrew
+    install_essential_tools
   end
 
   # if RUBY_PLATFORM.downcase.include?("linux")
@@ -105,13 +106,13 @@ private
     end
   end
 
-  def install_git_by_homebrew
+  def install_essential_tools
     puts GREEN + "======================================================" + NONE
     puts GREEN + "Installing Homebrew git package..."                     + NONE
     puts GREEN + "There may be some warnings."                            + NONE
     puts GREEN + "It will ignore if git is already installed."            + NONE
     puts GREEN + "======================================================" + NONE
-    run %{brew install git}
+    run %{./.brew}
     puts
   end
 
