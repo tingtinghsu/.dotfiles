@@ -40,6 +40,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'mattn/zencoding-vim'
+Bundle 'myusuf3/numbers.vim'
 
 "
 "----------------- End Vundle --------------
@@ -127,7 +128,7 @@ cnoremap <C-E>      <End>
 cnoremap <C-K>      <C-U>
 
 " ---------------- Plugin ---------------------
-"  
+"
 
 " --- TComment
 " comment lines with cmd+/
@@ -151,6 +152,9 @@ nmap <D-\> :TagbarToggle<CR>
 " --- ctrlp
 let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_show_hidden = 1
+
+" --- numbers.vim
+nnoremap <F3> :NumbersToggle<CR>
 
 "
 " -------------- End Plugin --------------------
