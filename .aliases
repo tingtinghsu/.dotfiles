@@ -46,3 +46,6 @@ alias vswitch="workon"
 
 # 有用的東西
 alias ip="curl ipecho.net/plain; echo"
+
+# 網速測試
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
