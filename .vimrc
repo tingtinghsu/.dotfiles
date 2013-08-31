@@ -26,7 +26,6 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'airblade/vim-gitgutter'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -39,6 +38,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'bling/vim-airline'
 
 "
 "----------------- End Vundle --------------
@@ -65,7 +65,8 @@ colors Tomorrow-Night-Bright " vim color scheme
 set autoread                 " auto read when file is changed from outside
 set history=50               " keep 50 lines of command line history
 set mouse=a                  " mouse support
-set guifont=Monaco:h14
+" patched font src: https://github.com/Lokaltog/powerline-fonts/pull/16
+set guifont=Monaco\ for\ Powerline:h14
 set t_Co=256                 " 256 color mode
 if has("gui_macvim")         " macvim shift movement
   let macvim_hig_shift_movement = 1
@@ -133,10 +134,6 @@ cnoremap <C-K>      <C-U>
 map <D-/> :TComment<cr>
 vmap <D-/> :TComment<cr>gv
 
-
-" --- PowerLine
-let g:Powerline_symbols = 'fancy' " require fontpatcher
-
 " --- vim-gitgutter
 let g:gitgutter_enabled = 1
 highlight clear SignColumn " For the same appearance as your line number column
@@ -147,6 +144,9 @@ nmap <D-\> :TagbarToggle<CR>
 " --- ctrlp
 let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_show_hidden = 1
+
+" --- airline
+let g:airline_powerline_fonts = 1
 
 
 "
