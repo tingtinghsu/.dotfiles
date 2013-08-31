@@ -32,7 +32,6 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-fugitive'
@@ -40,7 +39,6 @@ Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'mattn/zencoding-vim'
-Bundle 'myusuf3/numbers.vim'
 
 "
 "----------------- End Vundle --------------
@@ -135,9 +133,6 @@ cnoremap <C-K>      <C-U>
 map <D-/> :TComment<cr>
 vmap <D-/> :TComment<cr>gv
 
-" --- NerdTree
-" open sidebar with cmd+k
-map <C-k> :NERDTreeToggle<CR>
 
 " --- PowerLine
 let g:Powerline_symbols = 'fancy' " require fontpatcher
@@ -153,8 +148,6 @@ nmap <D-\> :TagbarToggle<CR>
 let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_show_hidden = 1
 
-" --- numbers.vim
-nnoremap <F3> :NumbersToggle<CR>
 
 "
 " -------------- End Plugin --------------------
