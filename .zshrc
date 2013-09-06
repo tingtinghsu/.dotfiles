@@ -60,7 +60,7 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000000
 SAVEHIST=1000000000
 
-. ~/nvm/nvm.sh # Load NVM
+source ~/.nvm/nvm.sh # Load NVM
 
 # source bash completion, also works for Z shell
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
