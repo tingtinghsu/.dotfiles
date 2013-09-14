@@ -80,6 +80,7 @@ set noeb vb t_vb=            " disable sound on errors
 set laststatus=2             " status line
 set wildmode=longest,list,full
 set wildmenu
+set whichwrap+=<,>,h,l,[,]   " Automatically wrap left and right
 
 " encoding settings
 set encoding=utf-8
