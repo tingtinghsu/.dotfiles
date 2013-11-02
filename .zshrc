@@ -42,6 +42,7 @@ plugins=(bower
          zsh-output-highlighting
          zsh-syntax-highlighting)
 
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source $ZSH/oh-my-zsh.sh
 
 # ---------------------------------------------------------
@@ -81,5 +82,3 @@ source /usr/local/share/python/virtualenvwrapper_lazy.sh
 
 # Now I can copy-paste commands with a dollar in front into zsh :)
 $ () { "$@" }
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
