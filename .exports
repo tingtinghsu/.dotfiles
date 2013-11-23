@@ -18,3 +18,5 @@ export PYTHONSTARTUP=~/.pythonrc
 
 # To use these certificates with OpenSSL:
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
+export LANG=en_US.UTF-8
