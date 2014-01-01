@@ -1,3 +1,5 @@
+export PATH=/usr/local/bin:$PATH
+
 # export excutable in dotfiles
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
