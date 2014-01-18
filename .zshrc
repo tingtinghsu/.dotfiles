@@ -30,9 +30,7 @@ plugins=(bower
          history-substring-search
          marked
          npm
-         rails3
-         rails4
-         redis-cli
+         rails
          rvm
          safe-paste
          tmux
