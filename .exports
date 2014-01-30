@@ -3,20 +3,12 @@ export PATH=/usr/local/bin:$PATH
 # export excutable in dotfiles
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
-# add Python scripts directory to PATH
-export PATH="/usr/local/share/python:$PATH"
-
-# virtualenv wrapper
-export WORKON_HOME=$HOME/.virtualenvs
-
 export BUNDLER_EDITOR=subl
 
 export CLICOLOR=1                        # 啟用顏色
 export LSCOLORS="Gxfxcxdxbxegedabagacad" # 設置顏色
 
 export EDITOR="subl"
-
-export PYTHONSTARTUP=~/.pythonrc
 
 # To use these certificates with OpenSSL:
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt

@@ -64,9 +64,6 @@ source ~/.nvm/nvm.sh # Load NVM
 # source bash completion, also works for Z shell
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
-# virtualenv wrapper
-source /usr/local/share/python/virtualenvwrapper_lazy.sh
-
 # Tmuxinator Environment Integration
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
