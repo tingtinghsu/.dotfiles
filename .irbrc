@@ -29,8 +29,8 @@ end
 # IRB.conf[:AUTO_INDENT] = true
 
 # interactive editor: use my favorite editor from within irb
-begin
-  require '~/Code/Project/interactive_editor/lib/interactive_editor.rb'
-rescue LoadError => err
-  warn "Couldn't load interactive_editor: #{err}"
-end
+# begin
+#   require '~/Code/Project/interactive_editor/lib/interactive_editor.rb'
+# rescue LoadError => err
+#   warn "Couldn't load interactive_editor: #{err}"
+# end

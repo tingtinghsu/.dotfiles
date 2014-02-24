@@ -19,11 +19,11 @@ class Hash
 end
 
 # interactive editor: use my favorite editor from within irb
-begin
-  require '~/Code/Project/interactive_editor/lib/interactive_editor.rb'
-rescue LoadError => err
-  warn "Couldn't load interactive_editor: #{err}"
-end
+# begin
+#   require '~/Code/Project/interactive_editor/lib/interactive_editor.rb'
+# rescue LoadError => err
+#   warn "Couldn't load interactive_editor: #{err}"
+# end
 
 # From: https://gist.github.com/rondale-sc/1297510
 # Default Command Set, add custom methods here:
