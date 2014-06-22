@@ -35,6 +35,7 @@ plugins=(brew
          tmux
          tmuxinator
          vagrant
+         z
          zaw
          zsh-output-highlighting
          zsh-syntax-highlighting)
