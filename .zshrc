@@ -41,7 +41,7 @@ plugins=(brew
          zsh-syntax-highlighting)
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source $HOME/.rvm/scripts/rvm
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
 source $ZSH/oh-my-zsh.sh
 
 # ---------------------------------------------------------
