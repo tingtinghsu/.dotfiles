@@ -11,6 +11,7 @@ export LSCOLORS="Gxfxcxdxbxegedabagacad" # 設置顏色
 export EDITOR="subl"
 
 # To use these certificates with OpenSSL:
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+export SSL_CERT_FILE=$(brew --prefix)/etc/openssl/cert.pem
+export GIT_SSL_CAINFO=$(brew --prefix)/etc/openssl/cert.pem
 
 export LANG=en_US.UTF-8
