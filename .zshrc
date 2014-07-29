@@ -60,10 +60,10 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000000
 SAVEHIST=1000000000
 
-source ~/.nvm/nvm.sh # Load NVM
+# source ~/.nvm/nvm.sh # Load NVM
 
 # source bash completion, also works for Z shell
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+# [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 # Tmuxinator Environment Integration
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
