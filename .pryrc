@@ -62,29 +62,33 @@ Pry.config.commands.import default_command_set
 # Defined aliases
 Pry.config.commands.alias_command "c", "clear"
 
+require 'awesome_print'
+AwesomePrint.pry!
+
 # Use Hirb gem with Pry
 begin
   require 'hirb'
-rescue LoadError
+  require 'hirb-unicode'
+  extend Hirb::Console
+rescue LoadError => e
   # Missing goodies, bummer
 end
 
-if defined? Hirb
-  # Slightly dirty hack to fully support in-session Hirb.disable/enable toggling
-  Hirb::View.instance_eval do
-    def enable_output_method
-      @output_method = true
-      @old_print = Pry.config.print
-      Pry.config.print = proc do |output, value|
-        Hirb::View.view_or_page_output(value) || @old_print.call(output, value)
-      end
+if defined? Rails
+  Pry.config.prompt_name = Rails.application.class.parent_name.underscore.dasherize
+
+  unless Rails.env.development?
+    old_prompt = Pry.config.prompt
+
+    if Rails.env.production?
+      Pry::Helpers::Text.red(Rails.env.upcase)
+    else
+      Pry::Helpers::Text.yellow(Rails.env.upcase)
     end
 
-    def disable_output_method
-      Pry.config.print = @old_print
-      @output_method = nil
-    end
+    Pry.config.prompt = [
+      proc { |*a| "#{env} #{old_prompt.first.call(*a)}"  },
+      proc { |*a| "#{env} #{old_prompt.second.call(*a)}" }
+    ]
   end
-
-  Hirb.enable
 end
