@@ -29,7 +29,6 @@ plugins=(brew
          history-substring-search
          marked
          npm
-         nvm
          rails
          rvm
          safe-paste
@@ -41,13 +40,11 @@ plugins=(brew
          zsh-output-highlighting
          zsh-syntax-highlighting)
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
-source $ZSH/oh-my-zsh.sh
-
 # ---------------------------------------------------------
 # Customizations
 # ---------------------------------------------------------
+
+source ~/.nvm/nvm.sh
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
@@ -77,3 +74,7 @@ SAVEHIST=1000000000
 
 # Now I can copy-paste commands with a dollar in front into zsh :)
 $ () { "$@" }
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
+source $ZSH/oh-my-zsh.sh
