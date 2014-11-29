@@ -78,3 +78,7 @@ $ () { "$@" }
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
 source $ZSH/oh-my-zsh.sh
+
+# fixed history-substring-search keybinding issues on OS X 10.9
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
