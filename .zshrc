@@ -49,7 +49,7 @@ source ~/.nvm/nvm.sh
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{exports,aliases}; do
+for file in ~/.{exports,aliases,profile}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
@@ -76,8 +76,8 @@ SAVEHIST=1000000000
 # Now I can copy-paste commands with a dollar in front into zsh :)
 $ () { "$@" }
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
+# export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
 source $ZSH/oh-my-zsh.sh
 
 # fixed history-substring-search keybinding issues on OS X 10.9
