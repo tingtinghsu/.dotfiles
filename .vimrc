@@ -114,7 +114,7 @@ set guioptions-=r
 
 " add spell checking and automatic wrapping at the
 " recommended 72 columns to you commit messages
-autocmd Filetype gitcommit setlocal spell textwidth=72
+" autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " to move effeciently between splits
 nmap gh <C-w>h
