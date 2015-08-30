@@ -39,6 +39,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'bling/vim-airline'
+Bundle 'evanmiller/nginx-vim-syntax'
 
 "
 "----------------- End Vundle --------------
