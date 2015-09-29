@@ -146,6 +146,7 @@ nmap <D-\> :TagbarToggle<CR>
 " --- ctrlp
 let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\.(swp|ico|git|svn))$'
 
 " --- airline
 let g:airline_powerline_fonts = 1
