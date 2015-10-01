@@ -8,10 +8,7 @@ alias l="ls -lp"                           # 清單列表不隱藏的資料夾�
 alias ls="ls -lp"
 alias ld='ls -l ${colorflag} | grep "^d"'  # 清單列表只列出資料夾
 
-alias -s rb="vim"
-alias -s log="less -MN"
-
-# 抄捷徑啦
+# 捷徑
 alias c="clear"
 alias s="subl ."
 alias o="open"
@@ -29,9 +26,6 @@ alias dotfiles="cd ~/.dotfiles"
 alias prj="cd ~/Code/Project"
 alias pra="cd ~/Code/Practice"
 alias sdx="cd ~/Code/Sandbox"
-
-# Minecraft!!
-alias minecraft="java -Xmx1024M -Xms512M -cp ~/Library/Application\ Support/minecraft/bin/MinecraftSP.jar net.minecraft.LauncherFrame"
 
 alias coffitivity="open -a /Applications/MPlayerX.app ~/Dropbox/Music/Coffitivity.mp3 --args -file -volume 50 -StartByFullScreen NO"
 
