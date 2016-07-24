@@ -3,16 +3,8 @@ export PATH=/usr/local/sbin:$PATH
 
 # export excutable in dotfiles
 export PATH="$HOME/.dotfiles/bin:$PATH"
-
 export BUNDLER_EDITOR=subl
-
 export CLICOLOR=1                        # 啟用顏色
 export LSCOLORS="Gxfxcxdxbxegedabagacad" # 設置顏色
-
 export EDITOR="subl"
-
-# To use these certificates with OpenSSL:
-export SSL_CERT_FILE=$(brew --prefix)/etc/openssl/cert.pem
-export GIT_SSL_CAINFO=$(brew --prefix)/etc/openssl/cert.pem
-
 export LANG=en_US.UTF-8
