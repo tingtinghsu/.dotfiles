@@ -35,6 +35,7 @@ plugins=(aws
          tmux
          tmuxinator
          vagrant
+         yarn
          z
          zaw
          zsh-output-highlighting
