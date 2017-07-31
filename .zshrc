@@ -22,6 +22,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(aws
          bundler
          capistrano
+         composer
          git
          git-extras
          git-flow
@@ -46,13 +47,6 @@ plugins=(aws
 # ---------------------------------------------------------
 
 source ~/.nvm/nvm.sh
-
-# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, and ~/.functions
-# ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{exports,aliases,profile}; do
-  [ -r "$file" ] && source "$file"
-done
-unset file
 
 ## Command history configuration
 HISTFILE=$HOME/.zsh_history
@@ -79,6 +73,13 @@ $ () { "$@" }
 # export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
 source $ZSH/oh-my-zsh.sh
+
+# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, and ~/.functions
+# ~/.extra can be used for settings you don’t want to commit
+for file in ~/.{exports,aliases,profile}; do
+  [ -r "$file" ] && source "$file"
+done
+unset file
 
 # fixed history-substring-search keybinding issues on OS X 10.9
 bindkey '^[[A' history-substring-search-up
