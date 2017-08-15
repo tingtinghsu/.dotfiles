@@ -27,6 +27,7 @@ plugins=(aws
          git-extras
          git-flow
          gem
+         golang
          history-substring-search
          marked
          npm
