@@ -1,6 +1,6 @@
 --skip-bundle
---skip-test-unit
+--skip-test
 --skip-turbolinks
 --skip-coffee
 --database=postgresql
---skip-bundle
+--skip-puma
