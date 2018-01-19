@@ -25,7 +25,6 @@ plugins=(aws
          composer
          git
          git-extras
-         git-flow
          gem
          golang
          history-substring-search
@@ -36,7 +35,6 @@ plugins=(aws
          rvm
          safe-paste
          tmux
-         tmuxinator
          vagrant
          yarn
          z
