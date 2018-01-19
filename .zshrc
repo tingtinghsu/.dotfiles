@@ -31,6 +31,7 @@ plugins=(aws
          history-substring-search
          marked
          npm
+         nvm
          rails
          rvm
          safe-paste
@@ -46,8 +47,6 @@ plugins=(aws
 # ---------------------------------------------------------
 # Customizations
 # ---------------------------------------------------------
-
-source ~/.nvm/nvm.sh
 
 ## Command history configuration
 HISTFILE=$HOME/.zsh_history
