@@ -27,6 +27,7 @@ plugins=(aws
          git-extras
          gem
          golang
+         heroku
          history-substring-search
          marked
          npm
