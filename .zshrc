@@ -69,7 +69,8 @@ SAVEHIST=1000000000
 # Now I can copy-paste commands with a dollar in front into zsh :)
 $ () { "$@" }
 
-# export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# RVM
+export PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 # [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
 
 # GVM
