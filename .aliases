@@ -30,3 +30,5 @@ alias ip="curl ipecho.net/plain; echo"
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
+alias untar = "tar -zxvf"
