@@ -21,22 +21,7 @@ alias rd="rake deploy"
 alias rgd="rake generate; rake deploy"
 
 # 任意門……
-alias blog="cd ~/Code/Project/octopress/chinghanho"
 alias dotfiles="cd ~/.dotfiles"
-alias prj="cd ~/Code/Project"
-alias pra="cd ~/Code/Practice"
-alias sdx="cd ~/Code/Sandbox"
-
-alias coffitivity="open -a /Applications/MPlayerX.app ~/Dropbox/Music/Coffitivity.mp3 --args -file -volume 50 -StartByFullScreen NO"
-
-# virtualenvwrapper
-alias v="workon"
-alias vls="lsvirtualenv"
-alias vcp="cpvirtualenv"
-alias vquit="deactivate"
-alias vmk="mkvirtualenv"
-alias vrm="rmvirtualenv"
-alias vswitch="workon"
 
 # 有用的東西
 alias ip="curl ipecho.net/plain; echo"
