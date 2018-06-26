@@ -32,4 +32,4 @@ alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
-alias untar = "tar -zxvf"
+alias untar="tar -zxvf"
