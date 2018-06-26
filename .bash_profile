@@ -28,3 +28,5 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
+
+[[ -s "/Users/chh/.gvm/scripts/gvm" ]] && source "/Users/chh/.gvm/scripts/gvm"

@@ -71,6 +71,10 @@ $ () { "$@" }
 
 # export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm ]]
+
+# GVM
+[[ -s "/Users/chh/.gvm/scripts/gvm" ]] && source "/Users/chh/.gvm/scripts/gvm"
+
 source $ZSH/oh-my-zsh.sh
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, and ~/.functions
