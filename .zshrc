@@ -117,4 +117,3 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
