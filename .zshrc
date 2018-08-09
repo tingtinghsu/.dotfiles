@@ -22,7 +22,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(aws
          bundler
          capistrano
-         composer
          git
          git-extras
          gem
