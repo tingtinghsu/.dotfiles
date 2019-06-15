@@ -4,3 +4,4 @@
 --skip-coffee
 --database=postgresql
 --skip-puma
+--no-document
