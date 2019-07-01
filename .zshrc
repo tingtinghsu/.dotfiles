@@ -21,21 +21,17 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(aws
          bundler
-         capistrano
          git
          git-extras
          gem
-         golang
          heroku
          history-substring-search
-         marked
          npm
          nvm
          rails
          rvm
          safe-paste
          tmux
-         vagrant
          yarn
          z
          zaw
