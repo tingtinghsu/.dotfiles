@@ -6,8 +6,13 @@
 #
 # Copies the git.io URL to your clipboard.
 
-url  = ARGV[0]
-code = ARGV[1]
+if $stdin.tty?
+  url  = ARGV[0]
+  code = ARGV[1]
+else
+  url = STDIN.gets.chomp
+  code = nil
+end
 
 if url !~ /^(https?:\/\/)?(gist\.)?github.com/
   abort "* github.com URLs only"
