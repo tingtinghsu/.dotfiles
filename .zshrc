@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bullet-train"
+ZSH_THEME="robbyrussell"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 DISABLE_AUTO_TITLE="true"
@@ -84,7 +84,14 @@ unset file
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# https://www.iterm2.com/documentation-shell-integration.html
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# set variables for iterm status bar
+iterm2_print_user_vars() {
+  iterm2_set_user_var nodeVersion $(node -v)
+  iterm2_set_user_var pwd $(pwd)
+}
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/chh/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/chh/google-cloud-sdk/path.zsh.inc'; fi
