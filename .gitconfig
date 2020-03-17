@@ -25,6 +25,7 @@
 	changed = green
 	untracked = cyan
 [merge]
+	tool = vscode
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 [alias]
@@ -46,17 +47,18 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	quotepath = false
 	whitespace = cr-at-eol
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
 [push]
 	default = simple
 [diff]
+	tool = vscode
 	algorithm = patience
 [filter "media"]
 	required = true
