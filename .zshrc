@@ -32,6 +32,7 @@ plugins=(aws
          rvm
          safe-paste
          tmux
+         tmuxinator
          yarn
          z
          zaw
@@ -49,9 +50,6 @@ SAVEHIST=1000000000
 
 # source bash completion, also works for Z shell
 # [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-# Tmuxinator Environment Integration
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # ----------------------------------------
 # Miscellaneous
