@@ -1,6 +1,7 @@
 [user]
 	name = CHH
 	email = chh@chh.tw
+	signingkey = 47D6B2DEF4CF62AF
 
 [color]
 	ui = true
@@ -70,3 +71,7 @@
 	required = true
 [rebase]
 	autosquash = true
+[gpg]
+	program = /usr/local/bin/gpg
+[commit]
+	gpgsign = true
